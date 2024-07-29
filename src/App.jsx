@@ -21,7 +21,7 @@ export function App () {
             const threeFirstWords = fact.split(' ', 3).join(' ')
             console.log(threeFirstWords)
 
-            setImageUrl(threeFirstWords+CAT_SUFIX_IMAGE_URL)
+            setImageUrl(threeFirstWords)
         })
 
     }, [])
@@ -33,7 +33,7 @@ export function App () {
             <h1>App de gatitos</h1>
             <section>
                 {fact && <p>{fact}</p>}
-                {imageUrl && <img src={`${CAT_PREFIX_IMAGE_URL}${imageUrl}`} alt=
+                {imageUrl && <img src={`${CAT_PREFIX_IMAGE_URL}${imageUrl}${CAT_SUFIX_IMAGE_URL}`} alt=
                 {`Image extracted using the first three words for ${fact}`} />}
             </section>
         </main>
